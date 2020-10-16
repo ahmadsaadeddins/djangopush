@@ -41,7 +41,7 @@ ROOT_URLCONF = 'djangopush.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,3 +112,7 @@ WEBPUSH_SETTINGS = {
     "VAPID_PRIVATE_KEY": "j8OJrlS9lbWdJh2Te_wwaxLQQTC89ivxS4tUWIdymNc",
     "VAPID_ADMIN_EMAIL": "as@ahm4d.com"
 }
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
